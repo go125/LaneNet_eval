@@ -41,8 +41,7 @@ python tools/test_lanenet.py --weights_path /PATH/TO/YOUT/CKPT_FILE_PATH
 ```
 
 ```
-python tools/test_lanenet.py --weights_path /Users/gosato/Desktop/BiseNetV2_LaneNet_Tusimple_Model_Weights
---image_path ./data/tusimple_test_image/0.jpg
+python tools/test_lanenet.py --weights_path /Users/gosato/Desktop/BiseNetV2_LaneNet_Tusimple_Model_Weights --image_path ./data/tusimple_test_image/0.jpg
 ```
 
 
