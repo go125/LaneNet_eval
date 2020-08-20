@@ -11,6 +11,8 @@ test LaneNet model on single image
 import argparse
 import os.path as ops
 import time
+import sys
+sys.path.append("./")
 
 import cv2
 import matplotlib.pyplot as plt
@@ -25,8 +27,7 @@ from local_utils.log_util import init_logger
 CFG = parse_config_utils.lanenet_cfg
 LOG = init_logger.get_logger(log_file_name_prefix='lanenet_test')
 
-import sys
-sys.path.append("./")
+
 
 
 def init_args():
