@@ -25,6 +25,9 @@ from local_utils.log_util import init_logger
 CFG = parse_config_utils.lanenet_cfg
 LOG = init_logger.get_logger(log_file_name_prefix='lanenet_test')
 
+import sys
+sys.path.append("./")
+
 
 def init_args():
     """
