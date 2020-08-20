@@ -39,6 +39,13 @@ You can test a single image on the trained model as follows
 python tools/test_lanenet.py --weights_path /PATH/TO/YOUT/CKPT_FILE_PATH 
 --image_path ./data/tusimple_test_image/0.jpg
 ```
+
+```
+python tools/test_lanenet.py --weights_path /Users/gosato/Desktop/BiseNetV2_LaneNet_Tusimple_Model_Weights
+--image_path ./data/tusimple_test_image/0.jpg
+```
+
+
 The results are as follows:
 
 `Test Input Image`
