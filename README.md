@@ -1,21 +1,10 @@
-# LaneNet-Lane-Detection
-Use tensorflow to implement a Deep Neural Network for real time lane detection mainly based on the IEEE IV conference 
-paper "Towards End-to-End Lane Detection: an Instance Segmentation Approach".You can refer to their paper for details 
-https://arxiv.org/abs/1802.05591. This model consists of a encoder-decoder stage, binary semantic segmentation stage 
-and instance semantic segmentation using discriminative loss function for real time lane detection task.
+# LaneNet-Eval
 
-The main network architecture is as follows:
+[Original](https://github.com/MaybeShewill-CV/lanenet-lane-detection)
 
-`Network Architecture`
-![NetWork_Architecture](./data/source_image/network_architecture.png)
+This code is modified for crack ratio calculation.
 
-## Supporting the project
-[lanenet-lane-detection](https://github.com/MaybeShewill-CV/lanenet-lane-detection) is being 
-sponsored by the following tool; please help to support us by taking a look and signing up to a free trial
-
-<a href="https://tracking.gitads.io/?repo=lanenet-lane-detection"><img src="https://images.gitads.io/lanenet-lane-detection" alt="GitAds"/></a>
-
-## Installation
+# Installation
 This software has only been tested on ubuntu 16.04(x64), python3.5, cuda-9.0, cudnn-7.0 with a GTX-1070 GPU. 
 To install this software you need tensorflow 1.12.0 and other version of tensorflow has not been tested but I think 
 it will be able to work properly in tensorflow above version 1.12. Other required package you may install them by
@@ -130,83 +119,4 @@ The accuracy during training process rises as follows:
 
 Please cite my repo [lanenet-lane-detection](https://github.com/MaybeShewill-CV/lanenet-lane-detection) if you use it.
 
-## Recently updates 2018.11.10
-Adjust some basic cnn op according to the new tensorflow api. Use the 
-traditional SGD optimizer to optimize the whole model instead of the
-origin Adam optimizer used in the origin paper. I have found that the
-SGD optimizer will lead to more stable training process and will not 
-easily stuck into nan loss which may often happen when using the origin
-code.
 
-## Recently updates 2018.12.13
-Since a lot of user want a automatic tools to generate the training samples
-from the Tusimple Dataset. I upload the tools I use to generate the training
-samples. You need to firstly download the Tusimple dataset and unzip the 
-file to your local disk. Then run the following command to generate the 
-training samples and the train.txt file.
-
-```angular2html
-python tools/generate_tusimple_dataset.py --src_dir path/to/your/unzipped/file
-```
-
-The script will make the train folder and the test folder. The training 
-samples of origin rgb image, binary label image, instance label image will
-be automatically generated in the training/gt_image, training/gt_binary_image,
-training/gt_instance_image folder.You may check it yourself before start
-the training process.
-
-Pay attention that the script only process the training samples and you 
-need to select several lines from the train.txt to generate your own 
-val.txt file. In order to obtain the test images you can modify the 
-script on your own.
-
-## Recently updates 2020.06.12
-
-Add real-time segmentation model BiseNetV2 as lanenet backbone. You may modify the
-config/tusimple_lanenet.yaml config file to choose the front-end of lanenet model.
-
-New lanenet model trainned based on BiseNetV2 can be found [here](https://www.dropbox.com/sh/0b6r0ljqi76kyg9/AADedYWO3bnx4PhK1BmbJkJKa?dl=0)
-
-The new model can reach 78 fps in single image inference process.
-
-## MNN Project
-
-Add tools to convert lanenet tensorflow ckpt model into mnn model and deploy
-the model on mobile device
-
-#### Freeze your tensorflow ckpt model weights file
-```
-cd LANENET_PROJECT_ROOT_DIR
-python mnn_project/freeze_lanenet_model.py -w lanenet.ckpt -s lanenet.pb
-```
-
-#### Convert pb model into mnn model
-```
-cd MNN_PROJECT_ROOT_DIR/tools/converter/build
-./MNNConver -f TF --modelFile lanenet.pb --MNNModel lanenet.mnn --bizCode MNN
-```
-
-#### Add lanenet source code into MNN project 
-
-Add lanenet source code into MNN project and modified CMakeList.txt to 
-compile the executable binary file.
-
-## TODO
-- [x] Add a embedding visualization tools to visualize the embedding feature map
-- [x] Add detailed explanation of training the components of lanenet separately.
-- [x] Training the model on different dataset
-- ~~[ ] Adjust the lanenet hnet model and merge the hnet model to the main lanenet model~~
-- ~~[ ] Change the normalization function from BN to GN~~
-
-## Acknowledgement
-
-The lanenet project refers to the following projects:
-
-- [MNN](https://github.com/alibaba/MNN)
-- [SimpleDBSCAN](https://github.com/CallmeNezha/SimpleDBSCAN)
-- [PaddleSeg](https://github.com/PaddlePaddle/PaddleSeg)
-
-## Contact
-
-Scan the following QR to disscuss :)
-![qr](./data/source_image/qr.jpg)
