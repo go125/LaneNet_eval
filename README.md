@@ -29,6 +29,14 @@ python tools/test_lanenet.py --weights_path /PATH/TO/YOUT/CKPT_FILE_PATH
 --image_path ./data/tusimple_test_image/0.jpg
 ```
 
+### AWS
+
+```
+python tools/test_lanenet.py --weights_path /home/ubuntu/data/BiseNetV2_LaneNet_Tusimple_Model_Weights/tusimple_lanenet.ckpt --image_path ./data/tusimple_test_image/0.jpg
+```
+
+### Local
+
 ```
 python tools/test_lanenet.py --weights_path /Users/gosato/Desktop/BiseNetV2_LaneNet_Tusimple_Model_Weights/tusimple_lanenet.ckpt --image_path ./data/tusimple_test_image/0.jpg
 ```
