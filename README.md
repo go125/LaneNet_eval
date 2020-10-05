@@ -72,6 +72,16 @@ python tools/evaluate_lanenet_on_tusimple.py
 --weights_path /PATH/TO/YOUT/CKPT_FILE_PATH 
 --save_dir ROOT_DIR/TUSIMPLE_DATASET/test_set/test_output
 ```
+
+### AWS
+```
+python tools/evaluate_lanenet_on_tusimple.py 
+--image_dir /home/ubuntu/data/tusimple/test_set/clips 
+--weights_path /home/ubuntu/data/BiseNetV2_LaneNet_Tusimple_Model_Weights/tusimple_lanenet.ckpt
+--save_dir /home/ubuntu/data/tusimple/test_set/test_output
+```
+
+
 If you set the save_dir argument the result will be saved in that folder 
 or the result will not be saved but be 
 displayed during the inference process holding on 3 seconds per image. 
