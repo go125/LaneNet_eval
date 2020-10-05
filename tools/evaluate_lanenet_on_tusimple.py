@@ -9,6 +9,7 @@
 Evaluate lanenet model on tusimple lane dataset
 """
 
+import sys
 sys.path.append("./")
 import argparse
 import glob
