@@ -29,6 +29,8 @@ python tools/test_lanenet.py --weights_path /PATH/TO/YOUT/CKPT_FILE_PATH
 --image_path ./data/tusimple_test_image/0.jpg
 ```
 
+### Running Example
+
 ### AWS
 
 ```
@@ -72,6 +74,8 @@ python tools/evaluate_lanenet_on_tusimple.py
 --weights_path /PATH/TO/YOUT/CKPT_FILE_PATH 
 --save_dir ROOT_DIR/TUSIMPLE_DATASET/test_set/test_output
 ```
+
+### Running Example
 
 ### AWS
 ```
