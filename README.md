@@ -1,4 +1,4 @@
-LaneNet-Eval
+# LaneNet-Eval
 
 [Original](https://github.com/MaybeShewill-CV/lanenet-lane-detection)
 
@@ -134,7 +134,4 @@ The `Instance Segmentation loss` drops as follows:
 ## Experiment
 The accuracy during training process rises as follows: 
 ![Training accuracy](./data/source_image/accuracy.png)
-
-Please cite my repo [lanenet-lane-detection](https://github.com/MaybeShewill-CV/lanenet-lane-detection) if you use it.
-
 
