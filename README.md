@@ -78,8 +78,7 @@ python tools/evaluate_lanenet_on_tusimple.py
 nohup python tools/evaluate_lanenet_on_tusimple.py \
 --image_dir /home/ubuntu/data/tusimple/clips \
 --weights_path /home/ubuntu/data/BiseNetV2_LaneNet_Tusimple_Model_Weights/tusimple_lanenet.ckpt \
---save_dir /home/ubuntu/data/tusimple/test_set/test_output \
-&
+--save_dir /home/ubuntu/data/tusimple/test_set/test_output &
 ```
 
 
