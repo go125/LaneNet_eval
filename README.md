@@ -1,4 +1,4 @@
-LaneNet-Eval
+# LaneNet-Eval
 
 [Original](https://github.com/MaybeShewill-CV/lanenet-lane-detection)
 
@@ -28,6 +28,8 @@ You can test a single image on the trained model as follows
 python tools/test_lanenet.py --weights_path /PATH/TO/YOUT/CKPT_FILE_PATH 
 --image_path ./data/tusimple_test_image/0.jpg
 ```
+
+### Running Example
 
 ### AWS
 
@@ -73,9 +75,14 @@ python tools/evaluate_lanenet_on_tusimple.py
 --save_dir ROOT_DIR/TUSIMPLE_DATASET/test_set/test_output
 ```
 
+### Running Example
+
 ### AWS
 ```
-python tools/evaluate_lanenet_on_tusimple.py --image_dir /home/ubuntu/data/tusimple/test_set/clips --weights_path /home/ubuntu/data/BiseNetV2_LaneNet_Tusimple_Model_Weights/tusimple_lanenet.ckpt --save_dir /home/ubuntu/data/tusimple/test_set/test_output
+nohup python tools/evaluate_lanenet_on_tusimple.py \
+--image_dir /home/ubuntu/data/tusimple/clips \
+--weights_path /home/ubuntu/data/BiseNetV2_LaneNet_Tusimple_Model_Weights/tusimple_lanenet.ckpt \
+--save_dir /home/ubuntu/data/tusimple/test_set/test_output &
 ```
 
 
@@ -131,7 +138,4 @@ The `Instance Segmentation loss` drops as follows:
 ## Experiment
 The accuracy during training process rises as follows: 
 ![Training accuracy](./data/source_image/accuracy.png)
-
-Please cite my repo [lanenet-lane-detection](https://github.com/MaybeShewill-CV/lanenet-lane-detection) if you use it.
-
 
