@@ -108,6 +108,8 @@ All your training image will be scaled into the same scale according to the conf
 
 Use the script here to generate the tensorflow records file
 
+11月実行予定
+
 ```
 python tools/make_tusimple_tfrecords.py 
 ```
@@ -119,8 +121,6 @@ You can switch --net argument to change the base encoder stage. If you choose --
 the base encoder stage and a pretrained parameters will be loaded. And you can modified the training 
 script to load your own pretrained parameters or you can implement your own base encoder stage. 
 You may call the following script to train your own model
-
-こちらから先に実行する
 
 ```
 python tools/train_lanenet_tusimple.py 
