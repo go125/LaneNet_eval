@@ -120,6 +120,8 @@ the base encoder stage and a pretrained parameters will be loaded. And you can m
 script to load your own pretrained parameters or you can implement your own base encoder stage. 
 You may call the following script to train your own model
 
+こちらから先に実行する
+
 ```
 python tools/train_lanenet_tusimple.py 
 ```
