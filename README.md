@@ -96,7 +96,7 @@ detection dataset and make it a video. You may catch a glimpse of it bellow.
 ![tusimple_batch_test_gif](./data/source_image/lanenet_batch_test.gif)
 
 ## Train your own model
-#### Data Preparation
+#### Data Preparation (To Do in November)
 Firstly you need to organize your training data refer to the data/training_data_example folder structure. And you need 
 to generate a train.txt and a val.txt to record the data used for training the model. 
 
@@ -106,15 +106,13 @@ instance use different pixel value to represent different lane field and 0 for t
 
 All your training image will be scaled into the same scale according to the config file.
 
-Use the script here to generate the tensorflow records file
-
-11月実行予定
+Use the script here to generate the tensorflow records file.
 
 ```
 python tools/make_tusimple_tfrecords.py 
 ```
 
-#### Train model
+#### Train model (To Do in November)
 In my experiment the training epochs are 80010, batch size is 4, initialized learning rate is 0.001 and use polynomial 
 decay with power 0.9. About training parameters you can check the global_configuration/config.py for details. 
 You can switch --net argument to change the base encoder stage. If you choose --net vgg then the vgg16 will be used as 
